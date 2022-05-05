@@ -11,27 +11,18 @@
       <%= video_tag( 'iceland.mp4', autoplay: true, loop: true, muted: true, id:'video')%>
       <div class="card-img-overlay">
       <!--Title, Buttons & Content-->
-        <div class='container' id='home_video_content'>
           <div class='row'>
-            <div class='col-9'>
-              TITLE
+            <div class='col-6'>
+              <h2 id='home_title'>TITLE<h2>
             </div>
           </div>  
           <div class='row'>
             <div class='col-6'>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class='col-6' id='home_buttons'>
-              <h2>Sign Up</h2>
-              <h2>Login</h2>
-              <h2>Map</h2>
-            </div>
-          
-          
-        
-
-
-      </div>
+         <!--Render depending if user is signed in-->
+            <%= render 'user/session_manager_home' %>
+            <!--End-->
     </div>
   </body>
 </html>

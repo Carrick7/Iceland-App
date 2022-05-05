@@ -5,8 +5,14 @@ body{
 #video{
   opacity: .8;
   width: 100%;
-  height: auto;
+}
+#video_container{
+  height:970px;
+  overflow: hidden;
 }
 #home_buttons{
   text-align: right;
+}
+#home_title{
+  margin-top: 40% !important;
 }
