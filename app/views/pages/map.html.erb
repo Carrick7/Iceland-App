@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= stylesheet_link_tag "map", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+ <!--Iceland Interactive Map-->
+  <div class="card bg-dark text-white" id="map_container">
+    <%= image_tag "map/Island.jpg", class: "card-img"%>
+    <div class="card-img-overlay">
+      <!--Reykjavik Position-->
+      <div id="reykjavik-position" class="pin-position">
+        <button class= "btn" id="reykjavik"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Reykjadalur Position-->
+      <div id="reykjadalur-position" class="pin-position">
+        <button class= "btn" id="reykjadalur" class="thermal"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Blue Lagoon Position-->
+      <div id="blue-lagoon-position" class="pin-position">
+        <button class= "btn" id="blue-lagoon" class="thermal"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Geysir Hot Springs Position-->
+      <div id="geysir-hot-springs-position" class="pin-position">
+        <button class= "btn" id="geysir-hot-springs"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Gullfoss Position-->
+      <div id="gullfoss-position" class="pin-position">
+        <button class= "btn" id="gullfoss"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Seljalandsfoss Position-->
+      <div id="seljalandsfoss-position" class="pin-position">
+        <button class= "btn" id="seljalandsfoss"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Skógafoss Position-->
+      <div id="skógafoss-position" class="pin-position">
+        <button class= "btn" id="skógafoss"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Reynisfjara Position-->
+      <div id="reynisfjara-position" class="pin-position">
+        <button class= "btn" id="reynisfjara"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Jökulsárlón Position-->
+      <div id="jökulsárlón-position" class="pin-position">
+        <button class= "btn" id="jökulsárlón"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Stuðlagil Position-->
+      <div id="stuðlagil-position" class="pin-position">
+        <button class= "btn" id="stuðlagil"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Dynjandi Position-->
+      <div id="dynjandi-position" class="pin-position">
+        <button class= "btn" id="dynjandi"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Kirkjufellsfoss Position-->
+      <div id="kirkjufellsfoss-position" class="pin-position">
+        <button class= "btn" id="kirkjufellsfoss"><i class="fa fa-map-pin"></i></button>
+      </div>
+      <!--Dettifoss Position-->
+      <div id="dettifoss-position" class="pin-position">
+        <button class= "btn" id="dettifoss"><i class="fa fa-map-pin"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  <br>
+  <br>
+
+  <div class="container-fluid">
+    <div class="card mb-3" style="max-width: 1800px;">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <!--Iceland Interactive Map-->
+          <div class="card bg-dark text-white" id="map_container">
+            <%= image_tag "map/Island.jpg", class: "card-img"%>
+            <div class="card-img-overlay"> 
+              <!--Reykjavik Position-->
+              <div id="reykjavik-position" class="pin-position">
+                <button class= "btn" id="reykjavik" type="button" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Reykjadalur Position-->
+              <div id="reykjadalur-position" class="pin-position">
+                <button class= "btn" id="reykjadalur" class="thermal"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Blue Lagoon Position-->
+              <div id="blue-lagoon-position" class="pin-position">
+                <button class= "btn" id="blue-lagoon" class="thermal"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Geysir Hot Springs Position-->
+              <div id="geysir-hot-springs-position" class="pin-position">
+                <button class= "btn" id="geysir-hot-springs"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Gullfoss Position-->
+              <div id="gullfoss-position" class="pin-position">
+                <button class= "btn" id="gullfoss"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Seljalandsfoss Position-->
+              <div id="seljalandsfoss-position" class="pin-position">
+                <button class= "btn" id="seljalandsfoss"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Skógafoss Position-->
+              <div id="skógafoss-position" class="pin-position">
+                <button class= "btn" id="skógafoss"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Reynisfjara Position-->
+              <div id="reynisfjara-position" class="pin-position">
+                <button class= "btn" id="reynisfjara"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Jökulsárlón Position-->
+              <div id="jökulsárlón-position" class="pin-position">
+                <button class= "btn" id="jökulsárlón"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Stuðlagil Position-->
+              <div id="stuðlagil-position" class="pin-position">
+                <button class= "btn" id="stuðlagil"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Dynjandi Position-->
+              <div id="dynjandi-position" class="pin-position">
+                <button class= "btn" id="dynjandi"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Kirkjufellsfoss Position-->
+              <div id="kirkjufellsfoss-position" class="pin-position">
+                <button class= "btn" id="kirkjufellsfoss"><i class="fa fa-map-pin"></i></button>
+              </div>
+              <!--Dettifoss Position-->
+              <div id="dettifoss-position" class="pin-position">
+                <button class= "btn" id="dettifoss"><i class="fa fa-map-pin"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script>var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})</script>
+</html>

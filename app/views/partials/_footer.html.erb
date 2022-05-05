@@ -28,9 +28,7 @@
                 <!-- Account Creation -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" id="account_sign_up">
                   <h6 class="text-uppercase fw-bold mb-4">Account Creation</h6>
-                  <a href="#!" class="text-reset">
-                    <p class="footer_highlights" id="footer_sign_up_link">Sign Up</p>
-                  </a>
+                    <%= link_to "Sign Up", new_user_registration_path, class:"footer_highlights" , id:"footer_sign_up_link"%>
                 </div>
                 <!-- Contact Details -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" id="contact">
@@ -42,15 +40,15 @@
             </div>
           </section>
           <!-- Copyright -->
-          <div class="text-center p-4" class="footer_colour" class="sticky-bottom">
+          <div id="copyright_container">
             <div class="container">
               <div class="row">
                 <div class="col-6" id="copyright">
-                  <p>© 2022 Copyright:</p>
+                  <p class="footer_highlights" id='footer_copyright_date'>© 2022 Copyright:</p>
                 </div>
                 <div class="col-6" id="title_copyright">
                   <a class="text-reset fw-bold" href="#">
-                    <p class="footer_highlights"><i class="fa fa-compass"></i> Explore Iceland<p>
+                    <p class="footer_highlights" id='footer_copyright_title'><i class="fa fa-compass"></i> Explore Iceland<p>
                   </a>
                 </div>
               </div>

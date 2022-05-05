@@ -1,29 +1,16 @@
 <% if current_user %>
-  <div class='col-6' id='home_buttons'>
+  <div id='home_buttons'>
    <div class='row'>
-    <div class="row justify-content-end" >
-      <div class='col-2'><%= button_to "Log Out", destroy_user_session_path, method: :delete %></div>
-    </div>  
+      <div class='home_links_container'><%= button_to "Log Out", destroy_user_session_path, method: :delete, class:'home_signing_link'%></div> 
    </div>  
-  <div class='row'>            
-   <div class="row justify-content-end" >
-     <div class='col-2'><h2>Map</h2><div> 
-   </div>
-  </div>
  </div>
   <% else %>
-  <div class='col-6' id='home_buttons'>
+  <div id='home_buttons'>
    <div class='row'>
-    <div class="row justify-content-end" >
-      <div class='col-2'><%= link_to "Sign Up", new_user_registration_path%></div>
-      <div class='col-2'><%= link_to "Login", new_user_session_path%></div>
-    </div>  
+     <div class='home_links_container'><%= link_to "Sign Up", new_user_registration_path, class:'home_signing_link'%></div>
+    </div> 
+   <div class='row'> 
+    <div class='home_links_container'><%= link_to "Login", new_user_session_path, class:'home_signing_link'%></div>
    </div>  
-  <div class='row'>            
-   <div class="row justify-content-end" >
-     <div class='col-2'><h2>Map</h2><div> 
-   </div>
-  </div>
  </div>  
 <% end %>
-

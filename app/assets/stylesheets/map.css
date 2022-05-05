@@ -1,0 +1,101 @@
+/*
+ *= require font-awesome
+ */
+
+ body{
+	font-family: 'Prompt', sans-serif;
+  /*background-color: rgba(135,180,183,255);*/
+}
+/*Home Page*/
+ /*Map Size*/
+ #map_container{
+    position: relative;
+    max-width: 850px;
+ }
+   /*Removes box shadow from BS*/
+.btn{
+	box-shadow: none !important
+}
+ /*Pin Locations*/
+ .pin-position{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+ }
+ #reykjavik-position{
+    top: 69.5%;
+    left: 25%;
+ }
+ #reykjadalur-position{
+    top: 72.5%;
+    left: 31.1%;
+ }
+ #blue-lagoon-position{
+    top: 76.5%;
+    left: 19.8%;
+ }
+ #geysir-hot-springs-position{
+    top: 64.5%;
+    left: 39%;
+ }
+ #gullfoss-position{
+    top: 63.5%;
+    left: 41%;
+ }
+ #seljalandsfoss-position{
+    top: 85.8%;
+    left: 41%;
+ }
+ #skógafoss-position{
+    top: 86.8%;
+    left: 45.5%;
+ }
+ #reynisfjara-position{
+    top: 89.8%;
+    left: 50%;
+ }
+ #jökulsárlón-position{
+    top: 72.5%;
+    left: 74%;
+ }
+ #stuðlagil-position{
+    top: 43%;
+    left: 80%;
+ }
+ #dynjandi-position{
+    top: 25.5%;
+    left: 16%;
+ }
+ #kirkjufellsfoss-position{
+    top: 46.8%;
+    left: 17.8%;
+ }
+ #dettifoss-position{
+    top: 25.5%;
+    left: 71.8%;
+ }
+  /*Pin Colours*/
+  /*City*/
+  #reykjavik{
+    color: rgb(73, 0, 122);
+  }
+  /*Bodies of Water & Rivers*/
+  #reykjadalur, #blue-lagoon, #jökulsárlón{
+    color: rgb(255, 115, 0);
+  }
+  /*Geysirs*/
+  #geysir-hot-springs{
+    color: rgb(145, 47, 2);
+  }
+  /*Waterfalls*/
+  #gullfoss, #seljalandsfoss, #skógafoss, #dynjandi, #kirkjufellsfoss, #dettifoss{
+    color: rgb(224, 0, 0);
+  }
+  /*Beach*/
+  #reynisfjara{
+    color: rgba(0, 0, 0, 0.911);
+  }
+  /*Canyon*/
+  #stuðlagil{
+    color: rgba(209, 0, 174, 0.911);
+  }

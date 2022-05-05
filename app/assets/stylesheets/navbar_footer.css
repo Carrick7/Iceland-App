@@ -3,6 +3,7 @@
  */
 
 /*NavBar & Footer*/
+*{font-family: 'Prompt', sans-serif;}
 .site_title{
   font-family: 'Satisfy', cursive;
   margin-bottom: 0;
@@ -58,22 +59,28 @@
   text-align: left;
   padding-left: 2.5px;
 }
+#footer_copyright_title{
+  text-align: left;
+}
+#footer_copyright_date{
+  text-align: right;
+}
 #copyright{
   text-align: right;
   padding-right: 2.5px;
 }
-.footer_highlights{
-  margin-top: 2.5px;
-}
 #footer_sign_up_link{
-  border: 1.8px solid rgb(181, 236, 255);
-  background-color: rgb(252, 78, 113);
+  border-bottom: 1.8px solid rgb(181, 236, 255);
   color: rgb(181, 236, 255);
   transition: 0.5s;
+  font-weight: bolder;
 }
 #footer_sign_up_link:hover{
-  border: 1.8px solid rgb(252, 78, 113);
-  background-color: rgb(181, 236, 255);
+  border-bottom: 1.8px solid rgb(252, 78, 113);
   color: rgb(252, 78, 113);
   transition: 0.5s;
+  font-weight: bolder;
+}
+#copyright_container{
+  padding-bottom: 0;
 }
