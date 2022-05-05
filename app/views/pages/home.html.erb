@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
-</head>
-<body>
-  <div class="card bg-dark text-white">
-   <%= image_tag "home/image_1.jpg", class:"carousel_image"%>
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
-  </div>
-</div>
-</body>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+<!--Background Video-->
+    <div class="card bg-dark text-white" id='video_container'>
+      <%= video_tag( 'iceland.mp4', autoplay: true, loop: true, muted: true, id:'video')%>
+      <div class="card-img-overlay">
+      <!--Title, Buttons & Content-->
+        <div class='container' id='home_video_content'>
+          <div class='row'>
+            <div class='col-9'>
+              TITLE
+            </div>
+          </div>  
+          <div class='row'>
+            <div class='col-6'>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class='col-6' id='home_buttons'>
+              <h2>Sign Up</h2>
+              <h2>Login</h2>
+              <h2>Map</h2>
+            </div>
+          
+          
+        
 
 
-  <!--asd
-  
-<section>
-    <%= image_tag "home/image_1.jpg", class:"bottom", class:"carousel_image"%>
-    <%= image_tag "home/image_2.jpg", class:"top", class:"carousel_image"%>
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="5000"> 
-      <%= image_tag "home/image_1.jpg", class:"carousel_image"%>
+      </div>
     </div>
-    <div class="carousel-item" data-bs-interval="5000">
-     <%= image_tag "home/image_2.jpg", class:"carousel_image"%>
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-      <%= image_tag "home/image_3.jpg", class:"carousel_image"%>
-    </div>
-  </div>
-</div>
-</section>
-
-  
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="5000"> 
-      <%= image_tag "home/image_1.jpg", class:"carousel_image"%>
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-     <%= image_tag "home/image_2.jpg", class:"carousel_image"%>
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-      <%= image_tag "home/image_3.jpg", class:"carousel_image"%>
-    </div>
-  </div>
-</div>-->
+  </body>
 </html>
+
+<!--asd
+ <div class="card bg-dark text-white" id='video_container'>
+      <%= video_tag( 'iceland.mp4', autoplay: true, loop: true, muted: true, id:'video')%>
+      <div class="card-img-overlay">
+        <div class='container' id='home_title'>
+          <div class='row'>
+            <div class='col'>
+              TITLE
+            </div>
+          <div class='row'>
+            <div class='col'>
+              CONTNET
+            </div>
+          </div>
+          </div>
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+
+
+
+-->

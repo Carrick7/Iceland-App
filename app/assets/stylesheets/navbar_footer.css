@@ -8,20 +8,23 @@
   margin-bottom: 0;
 }
 #navigation_bar, .dropdown-menu, .dropdown-menu:hover, .dropdown_links:hover, .dropdown-item:hover, .text-center{
-  background-color: rgb(35, 53, 112)
+  background-color: rgb(35, 53, 112);
 }
-#cities, #bowr, #waterfalls, #beaches, #canyons, #account_nav, .site_title, #home, #toggle_icon, .dropdown_links, .text-center, .footer_highlights, .account_nav_links, #button_log_out{
+#cities, #bowr, #waterfalls, #beaches, #canyons, #account_nav, .site_title, #home, #map, #toggle_icon, .dropdown_links, .text-center, .footer_highlights, .account_nav_links, #button_log_out{
   text-align: center;
   color: rgb(181, 236, 255);
   transition: .5s;
   text-decoration: none;
   box-shadow: none !important
 }
-#cities:hover, #bowr:hover, #waterfalls:hover, #beaches:hover, #canyons:hover, .site_title:hover, #home:hover, #toggle_icon:hover, 
+#cities:hover, #bowr:hover, #waterfalls:hover, #beaches:hover, #canyons:hover, .site_title:hover, #home:hover, #map:hover, #toggle_icon:hover, 
 .dropdown_links:hover, .footer_highlights:hover, #account_nav:hover, .account_nav_links:hover, #button_log_out:hover{
   color: rgb(252, 78, 113);
   transition: .5s;
   padding-bottom: 0;
+}
+#map{
+  margin-left: 35%;
 }
 .account_nav_links{
   margin-bottom: 10px; 
@@ -73,9 +76,4 @@
   background-color: rgb(181, 236, 255);
   color: rgb(252, 78, 113);
   transition: 0.5s;
-}
-#stick__footer{
-  position: sticky;
-  top: 100%;
-  bottom: 100%;
 }

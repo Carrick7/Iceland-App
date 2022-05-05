@@ -1,1 +1,12 @@
-
+body{
+  background-color:rgb(35, 53, 112);
+}
+/*Video*/
+#video{
+  opacity: .8;
+  width: 100%;
+  height: auto;
+}
+#home_buttons{
+  text-align: right;
+}

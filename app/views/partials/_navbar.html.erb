@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
   <!--NavBar-->
-  <nav class="navbar navbar-expand-lg navbar" id="navigation_bar">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar" class='sticky-top'id="navigation_bar">
+    <div class="container-fluid" >
       <a class="navbar-brand" href="#">
-        <h2 class="site_title"><i class="fa fa-compass"></i> Icelandic Adventures</h2>
+        <h2 class="site_title"><i class="fa fa-compass"></i> Explore Iceland </h2>
       </a>
       <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+       <%= link_to "Home", "/", id: "home" %>
+      </div>
+      <div class="navbar-nav">
+       <%= link_to "Map", "#", id: "map" %>
       </div>
       <button id="toggle_icon" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i class="fa fa-caret-down" id="dropdown_icon"></i></span>
