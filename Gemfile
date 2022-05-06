@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use pg as the database for Active Record
-gem "pg", "~> 1.1"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -35,6 +32,12 @@ gem "font-awesome-rails"
 
 # Devise
 gem 'devise'
+
+#databse 
+group :production do
+gem "pg", "~> 1.1"
+gem 'rails_12factor'
+end
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
