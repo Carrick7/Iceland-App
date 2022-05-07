@@ -6,6 +6,28 @@
   <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
   </head>
   <body>
-asd
+<!--Background Video-->
+    <div class="card bg-dark text-white" id='video_container'>
+     
+        <div class="card-img-overlay">
+      <!--Title, Buttons & Content-->
+          <div class='row'>
+            <div class='col-6'>
+              <h2 class='home_title_layout' id='home_title'>NEVER STOP EXPLORING<h2>
+              <h2 class='home_title_layout'>DISCOVER THE LAND OF FIRE & ICE<h2>
+            </div>
+          </div>  
+          <div class='row'>
+            <div class='col-5'>
+              <p class='home_content' id='home_hidden'>
+                Adventurers are drawn to Iceland because of its stunning natural beauty. The landscape is nothing short of mystical. The scenary promises an endless series of snow-covered volcanoes, mountains, waterfalls, canyons and ice fields. With a rugged, “other-worldly” terrain, the Nordic icy views are like nothing you'll see in the rest of the world.
+              </p>
+              <p class='home_content'>
+                Use our interactive <%= link_to "Map", "/map", id:'home_map_link'%> to guide you to some of Iceland's picteresque sights & see what our users thought about these magnificent natural wonders. Sign up and join our community to gain the ability to post comments & your images with our community. 
+              </p>
+              <!--Render Links-->
+            <%= render 'user/session_manager_home' %>
+            </div>
+    </div>
   </body>
 </html>
