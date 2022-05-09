@@ -39,6 +39,11 @@ gem "pg", "~> 1.1"
 gem 'rails_12factor'
 end
 
+#Gems for Image Management 
+ gem 'carrierwave', '~> 2.0'
+ gem 'mini_magick', '~> 4.9.5'
+ gem 'unf'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
