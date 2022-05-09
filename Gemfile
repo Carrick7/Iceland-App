@@ -33,9 +33,6 @@ gem "font-awesome-rails"
 # Devise
 gem 'devise'
 
-#active stroage
-gem "image_processing", "~> 1.2"
-
 #databse 
 group :production do
 gem "pg", "~> 1.1"

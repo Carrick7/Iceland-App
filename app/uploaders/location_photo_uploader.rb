@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class LocationPhotoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:

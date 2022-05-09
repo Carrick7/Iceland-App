@@ -11,7 +11,9 @@
 
   <p>
     <strong>Image:</strong>
-    <%= image_tag(location.image) %>
+    <%= location.image %>
+    <%= image_tag "#{location.image}" %>
+
   </p>
 
 </div>
