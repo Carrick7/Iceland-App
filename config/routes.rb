@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  #Location Pages
   resources :locations
-  devise_for :users
+  
+  devise_for :users, controllers:{
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
  #HomePage
  root 'pages#home'
  #MapPage

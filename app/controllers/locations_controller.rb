@@ -1,5 +1,7 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: %i[ show edit update destroy ]
+  #May delete this or refine it.
+  before_action :authenticate_user!, except: %i[show index]
 
   # GET /locations or /locations.json
   def index
@@ -22,6 +24,7 @@ class LocationsController < ApplicationController
   # POST /locations or /locations.json
   def create
     @location = Location.new(location_params)
+    @location.user = current_user
 
     respond_to do |format|
       if @location.save
