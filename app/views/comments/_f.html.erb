@@ -1,0 +1,13 @@
+<%= form_with(model: [location, location.comments.build]) do |f| %>
+  <div class="form-control">
+    <%= f.rich_text_area :body %>
+  </div>
+
+<div id="what">
+WHAT
+</div>
+
+  <div class="form-control">
+    <%= f.submit "Reply", class: "btn btn-primary mt-1" %>
+  </div>
+<% end %>
