@@ -3,3 +3,4 @@
 //= link navbar_footer.css
 //= link home.css
 //= link map.css
+//= link location_pages.css

@@ -1,23 +1,20 @@
+<!--Stylesheet-->
+<%= stylesheet_link_tag "location_pages", "data-turbo-track": "reload" %>
+  
+<!--Image-->
+<div class="image_container">                                    
+ <div class="card bg-dark text-white">
+    <%= image_tag "#{location.image}", class:"location_image", id:"image_#{dom_id location}" %>  
+  <div class="card-img-overlay">
+    <div class="location_image_title">
+     <h2 class="location_image_title"><%= location.title %></h2>
+    </div>
+  </div>
+ </div>    
+<!--Body of Text-->
 <div id="<%= dom_id location %>">
-  <p>
-    <strong>Title:</strong>
-    <%= location.title %>
-  </p>
-
-  <p>
-    <strong>By <%= location.user.email %></strong>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
+  <span class="location_body_text">
     <%= location.body %>
-  </p>
-
-  <p>
-    <strong>Image:</strong>
-    <%= location.image %>
-    <%= image_tag "#{location.image}" %>
-
-  </p>
-
+  </span>
+ </div>
 </div>

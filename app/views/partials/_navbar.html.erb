@@ -25,7 +25,9 @@
               Urban
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" ><p class="dropdown_links">Reykjavik</p></a></li>
+             <li class='dropdown_links'>
+              <%= link_to "Reykjavik", "/locations/8", class: "dropdown-item", class: "account_nav_links" %>
+             </li> 
             </ul>
           </div>
             <!--Bodies of Water & Rivers-->
@@ -34,9 +36,15 @@
               Lakes & Rivers
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">The Blue Lagoon</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Reykjadalur</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Jökulsárlón</p></a></li>
+              <li class='dropdown_links'>
+                <%= link_to "The Blue Lagoon", "/locations/9", class: "dropdown-item", class: "account_nav_links" %>
+             </li> 
+              <li class='dropdown_links'>
+                <%= link_to "Reykjadalur", "/locations/10", class: "dropdown-item", class: "account_nav_links" %>
+             </li> 
+              <li class='dropdown_links'>
+                <%= link_to "Jökulsárlón", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li> 
             </ul>
           </div>
             <!--Waterfalls-->
@@ -45,12 +53,24 @@
               Waterfalls
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Gullfoss</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Seljalandsfoss</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Skógafoss</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Dynjandi</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Kirkjufellsfoss</p></a></li>
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Dettifoss</p></a></li>
+              <li class='dropdown_links'>
+                <%= link_to "Gullfoss", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
+              <li class='dropdown_links'>
+                <%= link_to "Seljalandsfoss", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
+              <li class='dropdown_links'>
+                <%= link_to "Skógafoss", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
+              <li class='dropdown_links'>
+                <%= link_to "Dynjandi", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
+              <li class='dropdown_links'>
+                <%= link_to "Kirkjufellsfoss", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
+              <li class='dropdown_links'>
+                <%= link_to "Dettifoss", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
             </ul>
           </div>
             <!--Beaches-->
@@ -59,7 +79,9 @@
               Beaches
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Reynisfjara</p></a></li>
+              <li class='dropdown_links'>
+                <%= link_to "Reynisfjara", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
             </ul>
           </div>
             <!--Canyons-->
@@ -68,7 +90,9 @@
               Canyons
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><p class="dropdown_links">Stuðlagil</p></a></li>
+              <li class='dropdown_links'>
+                <%= link_to "Stuðlagil", "/locations/", class: "dropdown-item", class: "account_nav_links" %>
+             </li>
             </ul>
           </div>
             <!--Account-->
