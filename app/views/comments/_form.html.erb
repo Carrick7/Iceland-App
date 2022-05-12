@@ -1,6 +1,8 @@
 <form  action="<%= location_comments_path(location) %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">>
-
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <% if !parent.nil? %>
+    <input type="hidden" name="comment[parent_id]" value="<%= parent.id %>">
+  <% end %>
   <textarea name="comment[content]" rows="6" cols="20"></textarea>
 
   <input type="submit" value="Submit">

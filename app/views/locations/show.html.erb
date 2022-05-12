@@ -5,8 +5,8 @@
 <div>
   <p>
     <strong> Comments Section </strong>
-    <%= render @location.comments.includes(:user).order(id: :desc)%>
-    <%= render partial: "comments/form", locals: {location: @location} %>
+    <%= render @location.comments.where(parent_id: nil).includes(:user).order(id: :desc)%>
+    <%= render partial: "comments/form", locals: {location: @location, parent: nil} %>
   </p>
 </div>
 
