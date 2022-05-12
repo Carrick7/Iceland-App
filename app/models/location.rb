@@ -3,4 +3,5 @@ class Location < ApplicationRecord
   validates :body, presence: true, length: {minimum: 5, maximum: 50000}
   mount_uploader :image, LocationPhotoUploader
   belongs_to :user
+  has_many :comments
 end

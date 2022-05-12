@@ -3,6 +3,14 @@
 <%= render @location %>
 
 <div>
+  <p>
+    <strong> Comments Section </strong>
+    <%= render @location.comments.includes(:user).order(id: :desc)%>
+    <%= render partial: "comments/form", locals: {location: @location} %>
+  </p>
+</div>
+
+<div>
   <%= link_to "Edit this location", edit_location_path(@location) %> |
   <%= link_to "Back to locations", locations_path %>
 
