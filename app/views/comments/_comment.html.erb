@@ -1,0 +1,29 @@
+<div>
+  <small>By <%= comment.user.email %></small> |
+  <small><%= "#{time_ago_in_words(comment.created_at)}" %></small>
+</div>
+<div>
+  <%= comment.content %>
+
+  <a href="#" class="comment_form_display">Reply</a>
+  <div class="comment_form">
+   <%= render partial: 'comments/form', locals: {location: comment.location, parent: comment } %>
+  </div>
+  
+
+
+  <hr/>
+  <div class="sub_comment">
+   <%= render comment.comments.order(id: :desc) %>
+   
+  </div>  
+</div>
+
+<script>
+  document.querySelectorAll('.comment_form_display').forEach((el) => {
+    el.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      el.nextElementSibling.style = 'display: block;'
+    })
+  })
+ </script>

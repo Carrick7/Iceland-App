@@ -1,0 +1,41 @@
+body{
+  font-family: 'Prompt', sans-serif;
+}
+/*Image Container*/
+.image_container{
+  max-width: 65%;
+  margin-right: 17.5%;
+  margin-left: 17.5%;
+}
+.location_image_title{
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20%;
+  font-size: 80px;
+}
+@media screen and (max-width: 1086px){
+  .location_image_title{
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 821px){
+  .location_image_title{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 552px){
+  .location_image_title{
+    font-size: 20px;
+  }
+}
+.location_image{
+  opacity: .60;
+}
+/*Body of text*/
+.location_body_text{
+  white-space: pre-line;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
