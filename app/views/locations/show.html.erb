@@ -2,6 +2,8 @@
 
 <%= render @location %>
 
+<%= render partial: 'likes/button', locals: { likeable: @location } %>
+
 <div>
   <p>
     <strong> Comments Section </strong>
