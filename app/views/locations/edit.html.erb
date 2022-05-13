@@ -1,3 +1,4 @@
+<% if current_user.id ==1 %>
 <h1>Editing location</h1>
 
 <%= render "form", location: @location %>
@@ -8,3 +9,10 @@
   <%= link_to "Show this location", @location %> |
   <%= link_to "Back to locations", locations_path %>
 </div>
+
+<% else %>
+<div>
+  <h1>ACCESS DENIED</h1>
+</div>
+
+<% end %>

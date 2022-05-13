@@ -1,6 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Locations</h1>
+<% if current_user.id ==1 %>
+<h1>All Blog Posts</h1>
 
 <div id="locations">
   <% @locations.each do |location| %>
@@ -12,3 +11,10 @@
 </div>
 
 <%= link_to "New location", new_location_path %>
+
+<% else %>
+<div>
+  <h1>ACCESS DENIED</h1>
+</div>
+
+<% end %>
