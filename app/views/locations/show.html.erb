@@ -2,7 +2,11 @@
 
 <%= render @location %>
 
+<% if current_user %>
 <%= render partial: 'likes/button', locals: { likeable: @location } %>
+<% else %>
+
+<% end %>
 
 <div>
   <p>

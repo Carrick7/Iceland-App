@@ -1,7 +1,6 @@
 <div>
   <small>By <%= comment.user.email %></small> |
   <small><%= "#{time_ago_in_words(comment.created_at)}" %></small>
-</div>
 <div>
   <%= comment.content %>
   <%= render partial: 'likes/button', locals: { likeable: comment } %>
