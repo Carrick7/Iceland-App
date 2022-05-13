@@ -4,6 +4,7 @@
 </div>
 <div>
   <%= comment.content %>
+  <%= render partial: 'likes/button', locals: { likeable: comment } %>
 
   <a href="#" class="comment_form_display">Reply</a>
   <div class="comment_form">
