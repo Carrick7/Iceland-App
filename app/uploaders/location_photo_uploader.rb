@@ -40,13 +40,13 @@ class LocationPhotoUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :tiny do
-    process :resize_to_fill => [20, 20]
-  end
+  #version :tiny do
+   # process :resize_to_fill => [20, 20]
+  #end
 
-  version :profile_size do
-    process :resize_to_fill => [300, 300]
-  end
+  #version :profile_size do
+   # process :resize_to_fill => [300, 300]
+  #end
 
   # version :full_size do
   #   process :resize_to_fill => [700, 700]
