@@ -5,3 +5,4 @@
 //= link map.css
 //= link location_pages.css
 //= link comments.css
+//= link devise.css

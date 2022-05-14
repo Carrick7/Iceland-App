@@ -84,3 +84,7 @@
 #copyright_container{
   padding-bottom: 0;
 }
+#footer_position{
+  bottom: 0px; 
+  width: 100%;
+}

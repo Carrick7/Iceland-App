@@ -1,0 +1,49 @@
+/*Sign up*/
+.form_input_registration{
+  max-width: 98%;
+  margin-bottom: 15%;
+}
+.field, .form_input_title, .form_input_button{
+  margin-left: 10px;
+}
+.form_input_button{
+  font-weight: bolder;
+  text-decoration: none;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  background-image: linear-gradient(
+    -225deg,
+    rgb(0, 255, 242) 0%,
+    #5fff3e 29%,
+    rgb(252, 78, 113) 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  border: none;
+  font-size: 35px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+#form_card_sign{
+  background-color:rgb(35, 53, 112); 
+  color: rgb(181, 236, 255);
+  font-weight: normal;
+}
+.form_link_div{
+  margin-top: 55%;
+  bottom: 0;
+}
