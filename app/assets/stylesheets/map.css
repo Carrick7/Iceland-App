@@ -1,11 +1,6 @@
 /*
  *= require font-awesome
  */
-
- body{
-	font-family: 'Prompt', sans-serif;
-  /*background-color: rgba(135,180,183,255);*/
-}
 /*Home Page*/
  /*Map Size*/
  #map_container{
@@ -99,3 +94,31 @@
   #stuðlagil{
     color: rgba(209, 0, 174, 0.911);
   }
+
+/*Map Legend*/
+#urban_colour{
+   color: rgb(73, 0, 122);
+}
+#water_bodies_colour{
+   color: rgb(255, 115, 0);
+}
+#waterfall_colour{
+   color: rgb(224, 0, 0);
+}
+#beach_colour{
+   color: rgba(0, 0, 0, 0.911);
+}
+#canyon_colour{
+   color: rgba(209, 0, 174, 0.911);
+}
+#geysir_colour{
+   color: rgb(145, 47, 2);
+}
+.legend_div, .map_legend_text{
+   margin-top: 20px;
+   font-size: 18px;
+}
+.map_titles{
+   text-align: center;
+   margin-top: 20px;
+}

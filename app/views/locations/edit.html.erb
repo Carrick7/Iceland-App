@@ -7,13 +7,14 @@
 <br>
 
 <div>
-  <%= link_to "Show this location", @location %> |
+  <%= link_to "Show this location", @location%> |
   <%= link_to "Back to locations", locations_path %>
 </div>
 
 <% else %>
-<div>
-  <h1>ACCESS DENIED</h1>
+<!--Access Denied-->
+<div class="access_denied_cont">
+  <h1 class="access_denied">ACCESS DENIED</h1>
+  <small class="access_denied_text">You don't have access to this page</small>
 </div>
-
 <% end %>

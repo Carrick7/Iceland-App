@@ -1,16 +1,49 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= stylesheet_link_tag "devise", "data-turbo-track": "reload" %>
+<%= render 'partials/alerts'%>
+<!--Edit-->
+<div class="container" >
+<!--Card & Carousel-->
+  <div class="card bg" style="max-width: 100%; margin-top:25px;">
+    <div class="row g-0">
+      <div class="col-md-9">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "carousel/mountain.jpg", class: "d-block w-100"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "carousel/horses.jpg", class: "d-block w-100"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "carousel/house.jpg", class: "d-block w-100"%>
+      </div>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+      </div>
+      <!--Form-->
+      <div class="col-md-3" id="form_card_sign">
+        <div class="card-body">
+        <!--Title-->
+        <h2 class="form_input_title">Forgot your password?</h2>
+       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render 'partials/alerts'%>
+        <!--Email-->
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form_input_registration"  %>
+        </div>
+          <!--Submit Link-->
+        <div class="form_link_div">
+        <div class="actions">
+          <%= f.submit "Reset Password", class:"form_input_button" %>
+        </div>
+        <% end %>
+          <!--Login Link-->
+        <%= render "devise/shared/links"%>
+      </div>
+    </div>
   </div>
-<% end %>
+  <div>
+  <div>
+</div>
 
-<%= render "devise/shared/links" %>

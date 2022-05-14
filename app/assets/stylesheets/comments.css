@@ -1,6 +1,6 @@
 /*styling nested comments*/
-body{
-  font-weight: bold;
+#comments_font{
+font-weight: bold;
 }
 .sub_comment{
   padding-left: 20px;

@@ -37,5 +37,26 @@ body{
   font-size: 20px;
   font-weight: bold;
 }
-
-
+/*Access denied*/
+.access_denied_cont{
+  text-align: center;
+  color: red;
+  margin-bottom: 50vh;
+}
+.access_denied{
+  font-size: 80px;
+}
+.access_denied_text{
+  font-size: 50px;
+}
+/*create & edit location*/
+.text_area_location{
+  width: 75%;
+}
+.asd{
+  margin-left: 20px;
+}
+.destroy_location{
+  background-color: crimson;
+  color: #fff;
+}

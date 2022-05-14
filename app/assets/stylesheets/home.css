@@ -157,3 +157,7 @@ body{
     width: 350px;
   }
 }
+/*notices and alerts*/
+.notice, .alert{
+  color: rgb(181, 236, 255);
+}

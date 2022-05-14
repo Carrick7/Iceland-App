@@ -1,3 +1,6 @@
+<!--Stylesheet-->
+<%= stylesheet_link_tag "location_pages", "data-turbo-track": "reload" %>
+<div class="asd">
 <%= form_with(model: location) do |form| %>
   <% if location.errors.any? %>
     <div style="color: red">
@@ -18,15 +21,16 @@
 
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class:"text_area_location" %>
   </div>
 
   <div>
     <%= form.label :image, style: "display: block" %>
     <%= form.file_field :image %>
   </div>
-
+  <br />
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+</div>
