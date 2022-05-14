@@ -1,6 +1,10 @@
 <% if current_user %>
    <button type="button" class="btn btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="account_nav">
+     <% if current_user.name.nil? %>
+     <%= current_user.email %>
+     <% else %>
      <%= current_user.name %>
+     <% end %>
     </button>
     <ul class="dropdown-menu" id="log_out">
      <li class='dropdown_links'>
