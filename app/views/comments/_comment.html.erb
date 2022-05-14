@@ -1,23 +1,32 @@
-<div>
-  <small>By <%= comment.user.email %></small> |
-  <small><%= "#{time_ago_in_words(comment.created_at)}" %></small>
-<div>
-  <%= comment.content %>
-  <%= render partial: 'likes/button', locals: { likeable: comment } %>
-
-  <a href="#" class="comment_form_display">Reply</a>
-  <div class="comment_form">
-   <%= render partial: 'comments/form', locals: {location: comment.location, parent: comment } %>
-  </div>
-  
-
-
-  <hr/>
-  <div class="sub_comment">
-   <%= render comment.comments.order(id: :desc) %>
-   
+<!--User name & Time-->
+<div class="container">
+  <% if comment.user.name.nil? %>
+    <small><%= comment.user.email %></small> |
+  <% else %>
+    <small><%= comment.user.name %></small> |
+  <% end %>
+  <small><%= "#{time_ago_in_words(comment.created_at)}" %> <i class="bi bi-clock"></i></small>
+  <div>
+  <!--Comment Content-->
+  <div class="comment_text">
+    <%= comment.content %></div>
+    <!--Like Button-->
+    <div>
+    <%= render partial: 'likes/button', locals: { likeable: comment } %>
+    <!--Reply-->
+    <a href="#" class="comment_form_display">Reply <i class="bi bi-chat-left"></i></a>
+    <div class="comment_form">
+     <%= render partial: 'comments/form', locals: {location: comment.location, parent: comment } %>
+    </div>
+    </div>
+    <hr/>
+    <br/>
+     <!--Sub-Comment-->
+    <div class="sub_comment">
+      <%= render comment.comments.order(id: :desc) %> 
+    </div>
   </div>  
-</div>
+ </div>
 
 <script>
   document.querySelectorAll('.comment_form_display').forEach((el) => {

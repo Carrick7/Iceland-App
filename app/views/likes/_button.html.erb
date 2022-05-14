@@ -1,22 +1,32 @@
 <% if current_user %>
-<%= likeable.likes.count %>
-<!--Like Button for Location -->
+<div class="row">
+ <div class="col">
+  <!--Like/Unlike Buttons-->
+  <!--Like Button for Location -->
 <% like = current_user.likes.find_by(likeable: likeable)%>
   <% if like.nil? %>
-  <form action="/likes" method="post">
+  <form action="/likes" method="post" class="form_comment_like">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="like[likeable_id]" value="<%= likeable.id %>">
     <input type="hidden" name="like[likeable_type]" value="<%= likeable.class.to_s %>">
-    <input type="submit" value="Like">
+    <input type="submit" value="Like" class="like_unlike_button">
+    <i class="bi bi-heart-fill" id="like_heart"></i>
+    <!--Amount of Likes-->
+    <%= likeable.likes.count %>
   </form>
 <% else %>
-  <form action="<%= like_path(like) %>" method="post">
+  <form action="<%= like_path(like) %>" method="post" class="form_comment_like">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Unlike">
+    <input type="submit" value="Unlike" class="like_unlike_button">
+    <i class="bi bi-heart-fill" id="like_heart"></i>
+    <!--Amount of Likes-->
+    <%= likeable.likes.count %>
   </form>
 <% end %>
 
 <% else %>
 <h6>Sign in to use the Comment Section</h6>
-<% end %>
+<% end %>    
+ </div>
+</div>

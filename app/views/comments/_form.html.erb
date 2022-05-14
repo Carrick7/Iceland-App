@@ -3,7 +3,14 @@
   <% if !parent.nil? %>
     <input type="hidden" name="comment[parent_id]" value="<%= parent.id %>">
   <% end %>
-  <textarea name="comment[content]" rows="6" cols="20"></textarea>
-
-  <input type="submit" value="Submit">
+  <!--Text Area-->
+  <div class="container">
+    <div class="comment_reply_cont">
+    <textarea name="comment[content]"class="comment_reply_text"></textarea>
+    </div>
+    <!--Submit Button-->
+      <div class="comment_reply_submit_cont">
+        <input type="submit" value="Submit" class="comment_reply_submit">
+      </div>
+    </div>
 </form>

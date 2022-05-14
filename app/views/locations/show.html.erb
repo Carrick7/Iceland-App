@@ -1,24 +1,26 @@
-<p style="color: green"><%= notice %></p>
-
+<!--Article Content-->
+<br/>
 <%= render @location %>
-
-<% if current_user %>
-<%= render partial: 'likes/button', locals: { likeable: @location } %>
-<% else %>
-
-<% end %>
-
-<div>
-  <p>
-    <strong> Comments Section </strong>
+<!--Like button for Article-->
+<div class="container">
+  <% if current_user %>
+    <%= render partial: 'likes/button', locals: { likeable: @location } %>
+  <% else %>
+  <% end %>
+</div>
+<!--Comment Section-->
+<div class="container">
+    <p class="comment_section_title"> Comments Section </p>
     <%= render @location.comments.where(parent_id: nil).includes(:user).order(id: :desc)%>
     <%= render partial: "comments/form", locals: {location: @location, parent: nil} %>
-  </p>
 </div>
 
-<div>
-  <%= link_to "Edit this location", edit_location_path(@location) %> |
-  <%= link_to "Back to locations", locations_path %>
+<!--ADMIN ONLY-->
 
-  <%= button_to "Destroy this location", @location, method: :delete %>
-</div>
+  <div class="container">
+    <%= link_to "Edit this location", edit_location_path(@location) %> |
+    <%= link_to "Back to locations", locations_path %>
+
+    <%= button_to "Destroy this location", @location, method: :delete %>
+  </div>
+
