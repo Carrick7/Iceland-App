@@ -1,4 +1,4 @@
-/*Sign up*/
+/*Devise Form*/
 .form_input_registration{
   max-width: 98%;
   margin-bottom: 10%;
@@ -61,6 +61,6 @@
 }
 /*Delete button*/
 .delete_button{
-  background-color: rgb(189, 0, 0);
+  background-color: crimson;
   color: #fff;
 }

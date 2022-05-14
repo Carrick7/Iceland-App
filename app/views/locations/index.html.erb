@@ -1,20 +1,24 @@
 <% if current_user && current_user.id ==1 %>
-<h1>All Blog Posts</h1>
-
-<div id="locations">
-  <% @locations.each do |location| %>
+<div class="container">
+  <h1 style="text-align:center;">All Blog Posts</h1>
+  <div id="locations">
+    <% @locations.each do |location| %>
     <%= render location %>
     <p>
       <%= link_to "Show this location", location %>
     </p>
-  <% end %>
+    <hr />
+    <% end %>
 </div>
 
 <%= link_to "New location", new_location_path %>
 
 <% else %>
-<div>
-  <h1>ACCESS DENIED</h1>
+<!--Access Denied-->
+<div class="access_denied_cont">
+  <h1 class="access_denied">ACCESS DENIED</h1>
+  <small class="access_denied_text">You don't have access to this page</small>
+</div>
 </div>
 
 <% end %>

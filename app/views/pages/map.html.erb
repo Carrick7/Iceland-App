@@ -6,78 +6,94 @@
   <%= stylesheet_link_tag "map", "data-turbo-track": "reload" %>
   </head>
   <body>
-  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
- <!--Iceland Interactive Map-->
-  <div class="card bg-dark text-white" id="map_container">
-    <%= image_tag "map/Island.jpg", class: "card-img"%>
-    <div class="card-img-overlay">
-      <!--Reykjavik Position-->
-      <div id="reykjavik-position" class="pin-position">
-        <button class= "btn" id="reykjavik"><i class="fa fa-map-pin"></i></button>
-
-        <button type="button"  data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">X</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+       <div class="map_titles"><h3> Icelandic Map </h3></div>
+      <!--Iceland Interactive Map-->
+        <div class="card bg-dark text-white" id="map_container">
+          <%= image_tag "map/Island.jpg", class: "card-img"%>
+          <div class="card-img-overlay">
+            <!--Reykjavik Position-->
+            <div id="reykjavik-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Reykjavik" data-bs-content="The capital city of Iceland" class= "btn" id="reykjavik"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Reykjadalur Position-->
+            <div id="reykjadalur-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Reykjadalur" data-bs-content="A hike where you can reward yourself to bathe in the natural hot springs" class= "btn" id="reykjadalur" class="thermal"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Blue Lagoon Position-->
+            <div id="blue-lagoon-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="The Blue Lagoon" data-bs-content="A geothermal spa located in southwest Iceland, close to Keflavík Airport" class= "btn" id="blue-lagoon" class="thermal"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Geysir Hot Springs Position-->
+            <div id="geysir-hot-springs-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="The Geysir Hot Springs" data-bs-content="An area littered with geysir hot springs, guaranteed to erupt" class= "btn" id="geysir-hot-springs"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Gullfoss Position-->
+            <div id="gullfoss-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Gullfoss" data-bs-content="The most famous waterfall in all of Iceland" class= "btn" id="gullfoss"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Seljalandsfoss Position-->
+            <div id="seljalandsfoss-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Seljalandsfoss" data-bs-content="An amazing waterfall where visitors can walk behind it!" class= "btn" id="seljalandsfoss"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Skógafoss Position-->
+            <div id="skógafoss-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Skógafoss" data-bs-content="A famous waterfall that featured in Game of Thrones" class= "btn" id="skógafoss"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Reynisfjara Position-->
+            <div id="reynisfjara-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Reynisfjara" data-bs-content="A beach with black sand and volcanic rock formations " class= "btn" id="reynisfjara"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Jökulsárlón Position-->
+            <div id="jökulsárlón-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Jökulsárlón" data-bs-content="A glacial lake with icebergs " class= "btn" id="jökulsárlón"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Stuðlagil Position-->
+            <div id="stuðlagil-position" class="pin-position">
+              <button type="button"  data-bs-toggle="popover" title="Stuðlagil" data-bs-content="A canyon formed with volcanic basalt, unique place to see" class= "btn" id="stuðlagil"><i class="fa fa-map-pin"></i></button>        
+            </div>
+            <!--Dynjandi Position-->
+            <div id="dynjandi-position" class="pin-position">
+              <button type="button" data-bs-toggle="popover" title="Dynjandi" data-bs-content="A waterfall named after thunder" class= "btn" id="dynjandi"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Kirkjufellsfoss Position-->
+            <div id="kirkjufellsfoss-position" class="pin-position">
+              <button type="button" data-bs-toggle="popover" title="Kirkjufellsfoss" data-bs-content="Panoramic views all round, a waterfall, a mountain and if you're lucky, the northern lights too!" class= "btn" id="kirkjufellsfoss"><i class="fa fa-map-pin"></i></button>
+            </div>
+            <!--Dettifoss Position-->
+            <div id="dettifoss-position" class="pin-position">
+              <button type="button" data-bs-toggle="popover" title="Dettifoss" data-bs-content="Another waterall here! It is said that Dettifoss is the second strongest waterfall in Europe" class= "btn" id="dettifoss"><i class="fa fa-map-pin"></i></button>
+            </div>
+          </div>
+        </div>
       </div>
-      <!--Reykjadalur Position-->
-      <div id="reykjadalur-position" class="pin-position">
-        <button class= "btn" id="reykjadalur" class="thermal"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Blue Lagoon Position-->
-      <div id="blue-lagoon-position" class="pin-position">
-        <button class= "btn" id="blue-lagoon" class="thermal"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Geysir Hot Springs Position-->
-      <div id="geysir-hot-springs-position" class="pin-position">
-        <button class= "btn" id="geysir-hot-springs"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Gullfoss Position-->
-      <div id="gullfoss-position" class="pin-position">
-        <button class= "btn" id="gullfoss"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Seljalandsfoss Position-->
-      <div id="seljalandsfoss-position" class="pin-position">
-        <button class= "btn" id="seljalandsfoss"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Skógafoss Position-->
-      <div id="skógafoss-position" class="pin-position">
-        <button class= "btn" id="skógafoss"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Reynisfjara Position-->
-      <div id="reynisfjara-position" class="pin-position">
-        <button class= "btn" id="reynisfjara"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Jökulsárlón Position-->
-      <div id="jökulsárlón-position" class="pin-position">
-        <button class= "btn" id="jökulsárlón"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Stuðlagil Position-->
-      <div id="stuðlagil-position" class="pin-position">
-        <button class= "btn" id="stuðlagil"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Dynjandi Position-->
-      <div id="dynjandi-position" class="pin-position">
-        <button class= "btn" id="dynjandi"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Kirkjufellsfoss Position-->
-      <div id="kirkjufellsfoss-position" class="pin-position">
-        <button class= "btn" id="kirkjufellsfoss"><i class="fa fa-map-pin"></i></button>
-      </div>
-      <!--Dettifoss Position-->
-      <div id="dettifoss-position" class="pin-position">
-        <button class= "btn" id="dettifoss"><i class="fa fa-map-pin"></i></button>
-      </div>
+     <!--Map Legend + Instructions-->
+      <div class="col-4">
+        <div class="map_titles"><h3> Map Legend </h3></div>
+        <div class="map_legend_text">
+          <small> 
+            You can click on the pins to open up a mini description about each location. You can visit the pages for these locations by using the navbar above. Happy Exploring <i class="bi bi-compass"></i>
+          </small>
+        <div>
+        <div class="legend_div">
+            <i class="fa fa-map-pin" id="urban_colour"> </i><small> = Urban </small>
+            <br />
+            <i class="fa fa-map-pin" id="water_bodies_colour"></i><small> = Lakes/Bodies of Water </small>
+            <br />
+            <i class="fa fa-map-pin" id="waterfall_colour"></i><small> = Waterfalls </small>
+            <br />
+            <i class="fa fa-map-pin" id="beach_colour"></i><small> = Beach </small>
+            <br />
+            <i class="fa fa-map-pin" id="canyon_colour"></i><small> = Canyon </small>
+            <br />
+            <i class="fa fa-map-pin" id="geysir_colour"></i><small> = Geysirs </small>
+        </div>
     </div>
   </div>
-
-  <br>
-  <br>
-  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>#
-
-
-
-
-
-
-  </body>
+</div>
+</body>
 <script>
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
