@@ -44,6 +44,11 @@ end
  gem 'mini_magick', '~> 4.9.5'
  gem 'unf'
 
+#Testing
+group :test do
+gem 'minitest-reporters'
+end
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
