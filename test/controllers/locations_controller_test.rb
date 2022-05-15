@@ -2,17 +2,25 @@ require "test_helper"
 
 class LocationsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in users(:carrick)
     @location = locations(:one)
   end
-
+  
   test "should get index" do
+    sign_out users(:carrick)
     get locations_url
     assert_response :success
   end
 
-  test "should get new" do
+  test "should get new if signed in" do
     get new_location_url
     assert_response :success
+  end
+
+  test "should not get new if not sined in" do
+    sign_out users(:carrick)
+    get new_location_url
+    assert_response :redirect
   end
 
   test "should create location" do

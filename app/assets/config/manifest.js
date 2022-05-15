@@ -6,3 +6,4 @@
 //= link location_pages.css
 //= link comments.css
 //= link devise.css
+//= link application.js
