@@ -4,7 +4,35 @@
 <!--Image-->
 <div class="image_container">                                    
  <div class="card bg-dark text-white">
-    <%= image_tag "#{location.image}", class:"location_image", id:"image_#{dom_id location}" %>  
+    <% if location.id == 1 %>
+      <%= image_tag "locations/Reykjavik2.jpg", class:"location_image"%>
+    <% elsif location.id == 2 %>
+      <%= image_tag "locations/The_Blue_Lagoon.jpg", class:"location_image"%>  
+    <% elsif location.id == 3 %>
+      <%= image_tag "locations/rejkjaldur.jpg", class:"location_image"%>
+    <% elsif location.id == 4 %>
+      <%= image_tag "locations/joksulsarlon.jpg", class:"location_image"%>
+    <% elsif location.id == 5 %>
+      <%= image_tag "locations/Geysir.jpg", class:"location_image"%>
+    <% elsif location.id == 6 %>
+      <%= image_tag "locations/Gullfoss.jpg", class:"location_image"%>
+    <% elsif location.id == 7 %>
+      <%= image_tag "locations/Seljalandsfoss.jpg", class:"location_image"%>
+    <% elsif location.id == 8 %>
+      <%= image_tag "locations/Skógafoss.jpg", class:"location_image"%>
+    <% elsif location.id == 9 %>
+      <%= image_tag "locations/Dynjandi.jpg", class:"location_image"%>
+    <% elsif location.id == 10 %>
+      <%= image_tag "locations/Kirkjufell.jpg", class:"location_image"%>
+    <% elsif location.id == 11 %>
+      <%= image_tag "locations/Dettifoss.jpg", class:"location_image"%>
+    <% elsif location.id == 12 %>
+      <%= image_tag "locations/Reynisfjara.jpg", class:"location_image"%>
+    <% elsif location.id == 13 %>
+      <%= image_tag "locations/Stuðlagil.jpg", class:"location_image"%>
+    <% else %>
+      <%= image_tag "#{location.image}", class:"location_image" %>
+    <% end %>  
   <div class="card-img-overlay">
     <div class="location_image_title">
      <h2 class="location_image_title"><%= location.title %></h2>
